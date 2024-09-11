@@ -1,0 +1,34 @@
+[0;33m--- esp-idf-monitor 1.4.0 on /dev/ttyACM0 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40048dfc: uart_rx_readbuff in ROM
+[0m
+[0;33mWarning: checksum mismatch between flashed and built applications. Checksum of built application is 25aa2fe153cc779114e3757c25c3d5df2e3a727690b42c146d2e5ceefcb14dc1[0m
+[0;33mRunning /home/larzuk/.espressif/python_env/idf5.3_py3.11_env/bin/python /home/larzuk/esp/esp-idf/tools/idf.py flash...[0m
+[0;33m0x42004f96: esp_mprot_get_pms_area at /home/larzuk/esp/esp-idf/components/esp_hw_support/port/esp32s3/esp_memprot.c:362
+[0m
+[1;31mNone[0m
+[0;33mWaiting for the device to reconnect[0m[0;33m.[0m[0;33m.[0m[0;33m[0m
+[0;33mRunning /home/larzuk/.espressif/python_env/idf5.3_py3.11_env/bin/python /home/larzuk/esp/esp-idf/tools/idf.py flash...[0m
+[0;33m0x40041a76: ets_delay_us in ROM
+[0m
+[1;31mNone[0m
+[0;33mWaiting for the device to reconnect[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m[0m
+[0;33mRunning /home/larzuk/.espressif/python_env/idf5.3_py3.11_env/bin/python /home/larzuk/esp/esp-idf/tools/idf.py flash...[0m
+ninja failed with exit code 1, output of the command is in the /home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/build/log/idf_py_stderr_output_340120 and /home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/build/log/idf_py_stdout_output_340120
+[1;31m--- Build failed[0m
+[1;31m--- Press Ctrl+] to exit monitor.
+--- Press Ctrl+F to build & flash project.
+--- Press Ctrl+A to build & flash app.
+--- Press any other key to resume monitor (resets target).
+[0m
+[0;33mRunning /home/larzuk/.espressif/python_env/idf5.3_py3.11_env/bin/python /home/larzuk/esp/esp-idf/tools/idf.py flash...[0m
+ninja failed with exit code 1, output of the command is in the /home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/build/log/idf_py_stderr_output_340249 and /home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/build/log/idf_py_stdout_output_340249
+[1;31m--- Build failed[0m
+[1;31m--- Press Ctrl+] to exit monitor.
+--- Press Ctrl+F to build & flash project.
+--- Press Ctrl+A to build & flash app.
+--- Press any other key to resume monitor (resets target).
+[0m
+[0;33mConnection to /dev/ttyACM0 failed. Available ports:
+[0m
+[0m

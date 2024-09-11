@@ -1,0 +1,59 @@
+[1/10] Building C object esp-idf/tdeck-lib/CMakeFiles/__idf_tdeck-lib.dir/tdeck-lib.c.obj
+[2/10] Performing build step for 'bootloader'
+[1/1] cd /home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/build/bootloader/esp-idf/esptool_py && /home/larzuk/.espressif/python_env/idf5.3_py3.11_env/bin/python /home/larzuk/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/build/bootloader/bootloader.bin
+Bootloader binary size 0x5260 bytes. 0x2da0 bytes (36%) free.
+[3/10] No install step for 'bootloader'
+[4/10] Linking C static library esp-idf/tdeck-lib/libtdeck-lib.a
+[5/10] Completed 'bootloader'
+[6/10] Generating ld/sections.ld
+[7/10] Linking CXX executable main.elf
+[8/10] Generating binary image from built executable
+esptool.py v4.8.dev5
+Creating esp32s3 image...
+Merged 2 ELF sections
+Successfully created esp32s3 image.
+Generated /home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/build/main.bin
+[9/10] cd /home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/build/esp-idf/esptool_py && /home/larzuk/.espressif/python_env/idf5.3_py3.11_env/bin/python /home/larzuk/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/build/partition_table/partition-table.bin /home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/build/main.bin
+main.bin binary size 0x367c0 bytes. Smallest app partition is 0x100000 bytes. 0xc9840 bytes (79%) free.
+[9/10] cd /home/larzuk/esp/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/larzuk/esp/esp-idf -D "SERIAL_TOOL=/home/larzuk/.espressif/python_env/idf5.3_py3.11_env/bin/python;;/home/larzuk/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32s3" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/build -P /home/larzuk/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32s3 -p /dev/ttyACM0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size detect 0x0 bootloader/bootloader.bin 0x10000 main.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.8.dev5
+Serial port /dev/ttyACM0
+Connecting...
+Chip is ESP32-S3 (QFN56) (revision v0.2)
+Features: WiFi, BLE, Embedded PSRAM 8MB (AP_3v3)
+Crystal is 40MHz
+MAC: 48:ca:43:31:3e:ac
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Auto-detected Flash size: 16MB
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x00046fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 21088 bytes to 13065...
+Writing at 0x00000000... (100 %)
+Wrote 21088 bytes (13065 compressed) at 0x00000000 in 0.4 seconds (effective 454.9 kbit/s)...
+Hash of data verified.
+Compressed 223168 bytes to 116152...
+Writing at 0x00010000... (12 %)
+Writing at 0x0001cf88... (25 %)
+Writing at 0x000236d8... (37 %)
+Writing at 0x0002a2ff... (50 %)
+Writing at 0x0003075c... (62 %)
+Writing at 0x00039754... (75 %)
+Writing at 0x0003f459... (87 %)
+Writing at 0x00045db9... (100 %)
+Wrote 223168 bytes (116152 compressed) at 0x00010000 in 1.9 seconds (effective 953.3 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 541.2 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

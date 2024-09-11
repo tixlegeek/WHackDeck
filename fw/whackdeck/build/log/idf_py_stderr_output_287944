@@ -1,0 +1,520 @@
+[0;33m--- esp-idf-monitor 1.4.0 on /dev/ttyACM0 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40048d46: uart_rx_one_char in ROM
+[0m
+[0;33mRunning /home/larzuk/.espressif/python_env/idf5.3_py3.11_env/bin/python /home/larzuk/esp/esp-idf/tools/idf.py flash...[0m
+[0;33m0x40041a79: ets_delay_us in ROM
+[0m
+[0;33m0x4200a8c7: task_wdt_timeout_handling at /home/larzuk/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4200ace4: task_wdt_isr at /home/larzuk/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x40377181: _xt_lowint1 at /home/larzuk/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x42006502: uart_ll_get_txfifo_len at /home/larzuk/esp/esp-idf/components/hal/esp32s3/include/hal/uart_ll.h:390
+ (inlined by) uart_tx_char at /home/larzuk/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:170
+0x420073d7: uart_write at /home/larzuk/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:223
+0x420086c5: esp_vfs_write at /home/larzuk/esp/esp-idf/components/vfs/vfs.c:502 (discriminator 4)
+0x4200e416: write at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/syscalls/syswrite.c:11 (discriminator 1)
+0x42008214: console_write at /home/larzuk/esp/esp-idf/components/esp_vfs_console/vfs_console.c:67
+0x420086c5: esp_vfs_write at /home/larzuk/esp/esp-idf/components/vfs/vfs.c:502 (discriminator 4)
+0x4200de56: __swrite at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+0x4200d719: __sflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+0x4200d76a: _fflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+0x4200dd5d: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x42011d8f: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x4201176d: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x4200decd: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x42019d09: esp_log_writev at /home/larzuk/esp/esp-idf/components/log/log.c:210
+0x4037ffad: esp_log_write at /home/larzuk/esp/esp-idf/components/log/log.c:220
+0x42008e3d: app_main at /home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/main/main.c:14 (discriminator 2)
+0x420194e7: main_task at /home/larzuk/esp/esp-idf/components/freertos/app_startup.c:208
+0x4037a349: vPortTaskWrapper at /home/larzuk/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x4200a8c7: task_wdt_timeout_handling at /home/larzuk/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4200ace4: task_wdt_isr at /home/larzuk/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x40377181: _xt_lowint1 at /home/larzuk/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x42006502: uart_ll_get_txfifo_len at /home/larzuk/esp/esp-idf/components/hal/esp32s3/include/hal/uart_ll.h:390
+ (inlined by) uart_tx_char at /home/larzuk/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:170
+0x420073d7: uart_write at /home/larzuk/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:223
+0x420086c5: esp_vfs_write at /home/larzuk/esp/esp-idf/components/vfs/vfs.c:502 (discriminator 4)
+0x4200e416: write at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/syscalls/syswrite.c:11 (discriminator 1)
+0x42008214: console_write at /home/larzuk/esp/esp-idf/components/esp_vfs_console/vfs_console.c:67
+0x420086c5: esp_vfs_write at /home/larzuk/esp/esp-idf/components/vfs/vfs.c:502 (discriminator 4)
+0x4200de56: __swrite at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+0x4200d719: __sflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+0x4200d76a: _fflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+0x4200dd5d: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x42011d8f: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x4201176d: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x4200decd: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x42019d09: esp_log_writev at /home/larzuk/esp/esp-idf/components/log/log.c:210
+0x4037ffad: esp_log_write at /home/larzuk/esp/esp-idf/components/log/log.c:220
+0x42008e3d: app_main at /home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/main/main.c:14 (discriminator 2)
+0x420194e7: main_task at /home/larzuk/esp/esp-idf/components/freertos/app_startup.c:208
+0x4037a349: vPortTaskWrapper at /home/larzuk/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x4200a8c7: task_wdt_timeout_handling at /home/larzuk/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4200ace4: task_wdt_isr at /home/larzuk/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x40377181: _xt_lowint1 at /home/larzuk/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x42006502: uart_ll_get_txfifo_len at /home/larzuk/esp/esp-idf/components/hal/esp32s3/include/hal/uart_ll.h:390
+ (inlined by) uart_tx_char at /home/larzuk/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:170
+0x420073d7: uart_write at /home/larzuk/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:223
+0x420086c5: esp_vfs_write at /home/larzuk/esp/esp-idf/components/vfs/vfs.c:502 (discriminator 4)
+0x4200e416: write at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/syscalls/syswrite.c:11 (discriminator 1)
+0x42008214: console_write at /home/larzuk/esp/esp-idf/components/esp_vfs_console/vfs_console.c:67
+0x420086c5: esp_vfs_write at /home/larzuk/esp/esp-idf/components/vfs/vfs.c:502 (discriminator 4)
+0x4200de56: __swrite at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+0x4200d719: __sflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+0x4200d76a: _fflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+0x4200dd5d: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x42011d8f: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x4201176d: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x4200decd: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x42019d09: esp_log_writev at /home/larzuk/esp/esp-idf/components/log/log.c:210
+0x4037ffad: esp_log_write at /home/larzuk/esp/esp-idf/components/log/log.c:220
+0x42008e3d: app_main at /home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/main/main.c:14 (discriminator 2)
+0x420194e7: main_task at /home/larzuk/esp/esp-idf/components/freertos/app_startup.c:208
+0x4037a349: vPortTaskWrapper at /home/larzuk/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x4200a8c7: task_wdt_timeout_handling at /home/larzuk/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4200ace4: task_wdt_isr at /home/larzuk/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x40377181: _xt_lowint1 at /home/larzuk/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x400559dd: _xtos_set_intlevel in ROM
+0x4037a6fe: vPortClearInterruptMaskFromISR at /home/larzuk/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at /home/larzuk/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:509
+0x4200bd21: adc_oneshot_read at /home/larzuk/esp/esp-idf/components/esp_adc/adc_oneshot.c:188
+0x42008eee: td_battery_read at /home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/components/tdeck-lib/tdeck-lib.c:56
+0x42008e20: app_main at /home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/main/main.c:14 (discriminator 1)
+0x420194e7: main_task at /home/larzuk/esp/esp-idf/components/freertos/app_startup.c:208
+0x4037a349: vPortTaskWrapper at /home/larzuk/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x4200a8c7: task_wdt_timeout_handling at /home/larzuk/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4200ace4: task_wdt_isr at /home/larzuk/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x40377181: _xt_lowint1 at /home/larzuk/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x42006502: uart_ll_get_txfifo_len at /home/larzuk/esp/esp-idf/components/hal/esp32s3/include/hal/uart_ll.h:390
+ (inlined by) uart_tx_char at /home/larzuk/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:170
+0x420073d7: uart_write at /home/larzuk/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:223
+0x420086c5: esp_vfs_write at /home/larzuk/esp/esp-idf/components/vfs/vfs.c:502 (discriminator 4)
+0x4200e416: write at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/syscalls/syswrite.c:11 (discriminator 1)
+0x42008214: console_write at /home/larzuk/esp/esp-idf/components/esp_vfs_console/vfs_console.c:67
+0x420086c5: esp_vfs_write at /home/larzuk/esp/esp-idf/components/vfs/vfs.c:502 (discriminator 4)
+0x4200de56: __swrite at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+0x4200d719: __sflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+0x4200d76a: _fflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+0x4200dd5d: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x42011d8f: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x4201176d: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x4200decd: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x42019d09: esp_log_writev at /home/larzuk/esp/esp-idf/components/log/log.c:210
+0x4037ffad: esp_log_write at /home/larzuk/esp/esp-idf/components/log/log.c:220
+0x42008e3d: app_main at /home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/main/main.c:14 (discriminator 2)
+0x420194e7: main_task at /home/larzuk/esp/esp-idf/components/freertos/app_startup.c:208
+0x4037a349: vPortTaskWrapper at /home/larzuk/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x4200a8c7: task_wdt_timeout_handling at /home/larzuk/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4200ace4: task_wdt_isr at /home/larzuk/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x40377181: _xt_lowint1 at /home/larzuk/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x420064fd: uart_tx_char at /home/larzuk/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:168
+0x420073d7: uart_write at /home/larzuk/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:223
+0x420086c5: esp_vfs_write at /home/larzuk/esp/esp-idf/components/vfs/vfs.c:502 (discriminator 4)
+0x4200e416: write at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/syscalls/syswrite.c:11 (discriminator 1)
+0x42008214: console_write at /home/larzuk/esp/esp-idf/components/esp_vfs_console/vfs_console.c:67
+0x420086c5: esp_vfs_write at /home/larzuk/esp/esp-idf/components/vfs/vfs.c:502 (discriminator 4)
+0x4200de56: __swrite at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+0x4200d719: __sflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+0x4200d76a: _fflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+0x4200dd5d: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x42011d8f: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x4201176d: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x4200decd: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x42019d09: esp_log_writev at /home/larzuk/esp/esp-idf/components/log/log.c:210
+0x4037ffad: esp_log_write at /home/larzuk/esp/esp-idf/components/log/log.c:220
+0x42008e3d: app_main at /home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/main/main.c:14 (discriminator 2)
+0x420194e7: main_task at /home/larzuk/esp/esp-idf/components/freertos/app_startup.c:208
+0x4037a349: vPortTaskWrapper at /home/larzuk/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x4200a8c7: task_wdt_timeout_handling at /home/larzuk/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4200ace4: task_wdt_isr at /home/larzuk/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x40377181: _xt_lowint1 at /home/larzuk/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x42006508: uart_ll_get_txfifo_len at /home/larzuk/esp/esp-idf/components/hal/esp32s3/include/hal/uart_ll.h:390
+ (inlined by) uart_tx_char at /home/larzuk/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:170
+0x420073d7: uart_write at /home/larzuk/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:223
+0x420086c5: esp_vfs_write at /home/larzuk/esp/esp-idf/components/vfs/vfs.c:502 (discriminator 4)
+0x4200e416: write at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/syscalls/syswrite.c:11 (discriminator 1)
+0x42008214: console_write at /home/larzuk/esp/esp-idf/components/esp_vfs_console/vfs_console.c:67
+0x420086c5: esp_vfs_write at /home/larzuk/esp/esp-idf/components/vfs/vfs.c:502 (discriminator 4)
+0x4200de56: __swrite at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+0x4200d719: __sflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+0x4200d76a: _fflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+0x4200dd5d: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x42011d8f: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x4201176d: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x4200decd: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x42019d09: esp_log_writev at /home/larzuk/esp/esp-idf/components/log/log.c:210
+0x4037ffad: esp_log_write at /home/larzuk/esp/esp-idf/components/log/log.c:220
+0x42008e3d: app_main at /home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/main/main.c:14 (discriminator 2)
+0x420194e7: main_task at /home/larzuk/esp/esp-idf/components/freertos/app_startup.c:208
+0x4037a349: vPortTaskWrapper at /home/larzuk/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x4200a8c7: task_wdt_timeout_handling at /home/larzuk/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4200ace4: task_wdt_isr at /home/larzuk/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x40377181: _xt_lowint1 at /home/larzuk/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x42006502: uart_ll_get_txfifo_len at /home/larzuk/esp/esp-idf/components/hal/esp32s3/include/hal/uart_ll.h:390
+ (inlined by) uart_tx_char at /home/larzuk/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:170
+0x420073d7: uart_write at /home/larzuk/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:223
+0x420086c5: esp_vfs_write at /home/larzuk/esp/esp-idf/components/vfs/vfs.c:502 (discriminator 4)
+0x4200e416: write at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/syscalls/syswrite.c:11 (discriminator 1)
+0x42008214: console_write at /home/larzuk/esp/esp-idf/components/esp_vfs_console/vfs_console.c:67
+0x420086c5: esp_vfs_write at /home/larzuk/esp/esp-idf/components/vfs/vfs.c:502 (discriminator 4)
+0x4200de56: __swrite at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+0x4200d719: __sflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+0x4200d76a: _fflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+0x4200dd5d: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x42011d8f: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x4201176d: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x4200decd: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x42019d09: esp_log_writev at /home/larzuk/esp/esp-idf/components/log/log.c:210
+0x4037ffad: esp_log_write at /home/larzuk/esp/esp-idf/components/log/log.c:220
+0x42008e3d: app_main at /home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/main/main.c:14 (discriminator 2)
+0x420194e7: main_task at /home/larzuk/esp/esp-idf/components/freertos/app_startup.c:208
+0x4037a349: vPortTaskWrapper at /home/larzuk/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x4200a8c7: task_wdt_timeout_handling at /home/larzuk/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4200ace4: task_wdt_isr at /home/larzuk/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x40377181: _xt_lowint1 at /home/larzuk/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x42006502: uart_ll_get_txfifo_len at /home/larzuk/esp/esp-idf/components/hal/esp32s3/include/hal/uart_ll.h:390
+ (inlined by) uart_tx_char at /home/larzuk/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:170
+0x420073d7: uart_write at /home/larzuk/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:223
+0x420086c5: esp_vfs_write at /home/larzuk/esp/esp-idf/components/vfs/vfs.c:502 (discriminator 4)
+0x4200e416: write at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/syscalls/syswrite.c:11 (discriminator 1)
+0x42008214: console_write at /home/larzuk/esp/esp-idf/components/esp_vfs_console/vfs_console.c:67
+0x420086c5: esp_vfs_write at /home/larzuk/esp/esp-idf/components/vfs/vfs.c:502 (discriminator 4)
+0x4200de56: __swrite at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+0x4200d719: __sflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+0x4200d76a: _fflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+0x4200dd5d: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x42011d8f: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x4201176d: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x4200decd: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x42019d09: esp_log_writev at /home/larzuk/esp/esp-idf/components/log/log.c:210
+0x4037ffad: esp_log_write at /home/larzuk/esp/esp-idf/components/log/log.c:220
+0x42008e3d: app_main at /home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/main/main.c:14 (discriminator 2)
+0x420194e7: main_task at /home/larzuk/esp/esp-idf/components/freertos/app_startup.c:208
+0x4037a349: vPortTaskWrapper at /home/larzuk/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x4200a8c7: task_wdt_timeout_handling at /home/larzuk/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4200ace4: task_wdt_isr at /home/larzuk/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x40377181: _xt_lowint1 at /home/larzuk/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x420064fd: uart_tx_char at /home/larzuk/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:168
+0x420073d7: uart_write at /home/larzuk/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:223
+0x420086c5: esp_vfs_write at /home/larzuk/esp/esp-idf/components/vfs/vfs.c:502 (discriminator 4)
+0x4200e416: write at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/syscalls/syswrite.c:11 (discriminator 1)
+0x42008214: console_write at /home/larzuk/esp/esp-idf/components/esp_vfs_console/vfs_console.c:67
+0x420086c5: esp_vfs_write at /home/larzuk/esp/esp-idf/components/vfs/vfs.c:502 (discriminator 4)
+0x4200de56: __swrite at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+0x4200d719: __sflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+0x4200d76a: _fflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+0x4200dd5d: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x42011d8f: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x4201176d: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x4200decd: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x42019d09: esp_log_writev at /home/larzuk/esp/esp-idf/components/log/log.c:210
+0x4037ffad: esp_log_write at /home/larzuk/esp/esp-idf/components/log/log.c:220
+0x42008e3d: app_main at /home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/main/main.c:14 (discriminator 2)
+0x420194e7: main_task at /home/larzuk/esp/esp-idf/components/freertos/app_startup.c:208
+0x4037a349: vPortTaskWrapper at /home/larzuk/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x4200a8c7: task_wdt_timeout_handling at /home/larzuk/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4200ace4: task_wdt_isr at /home/larzuk/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x40377181: _xt_lowint1 at /home/larzuk/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x42006508: uart_ll_get_txfifo_len at /home/larzuk/esp/esp-idf/components/hal/esp32s3/include/hal/uart_ll.h:390
+ (inlined by) uart_tx_char at /home/larzuk/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:170
+0x420073d7: uart_write at /home/larzuk/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:223
+0x420086c5: esp_vfs_write at /home/larzuk/esp/esp-idf/components/vfs/vfs.c:502 (discriminator 4)
+0x4200e416: write at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/syscalls/syswrite.c:11 (discriminator 1)
+0x42008214: console_write at /home/larzuk/esp/esp-idf/components/esp_vfs_console/vfs_console.c:67
+0x420086c5: esp_vfs_write at /home/larzuk/esp/esp-idf/components/vfs/vfs.c:502 (discriminator 4)
+0x4200de56: __swrite at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+0x4200d719: __sflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+0x4200d76a: _fflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+0x4200dd5d: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x42011d8f: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x4201176d: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x4200decd: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x42019d09: esp_log_writev at /home/larzuk/esp/esp-idf/components/log/log.c:210
+0x4037ffad: esp_log_write at /home/larzuk/esp/esp-idf/components/log/log.c:220
+0x42008e3d: app_main at /home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/main/main.c:14 (discriminator 2)
+0x420194e7: main_task at /home/larzuk/esp/esp-idf/components/freertos/app_startup.c:208
+0x4037a349: vPortTaskWrapper at /home/larzuk/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x4200a8c7: task_wdt_timeout_handling at /home/larzuk/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4200ace4: task_wdt_isr at /home/larzuk/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x40377181: _xt_lowint1 at /home/larzuk/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x42006502: uart_ll_get_txfifo_len at /home/larzuk/esp/esp-idf/components/hal/esp32s3/include/hal/uart_ll.h:390
+ (inlined by) uart_tx_char at /home/larzuk/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:170
+0x420073d7: uart_write at /home/larzuk/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:223
+0x420086c5: esp_vfs_write at /home/larzuk/esp/esp-idf/components/vfs/vfs.c:502 (discriminator 4)
+0x4200e416: write at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/syscalls/syswrite.c:11 (discriminator 1)
+0x42008214: console_write at /home/larzuk/esp/esp-idf/components/esp_vfs_console/vfs_console.c:67
+0x420086c5: esp_vfs_write at /home/larzuk/esp/esp-idf/components/vfs/vfs.c:502 (discriminator 4)
+0x4200de56: __swrite at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+0x4200d719: __sflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+0x4200d76a: _fflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+0x4200dd5d: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x42011d8f: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x4201176d: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x4200decd: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x42019d09: esp_log_writev at /home/larzuk/esp/esp-idf/components/log/log.c:210
+0x4037ffad: esp_log_write at /home/larzuk/esp/esp-idf/components/log/log.c:220
+0x42008e3d: app_main at /home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/main/main.c:14 (discriminator 2)
+0x420194e7: main_task at /home/larzuk/esp/esp-idf/components/freertos/app_startup.c:208
+0x4037a349: vPortTaskWrapper at /home/larzuk/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x4200a8c7: task_wdt_timeout_handling at /home/larzuk/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4200ace4: task_wdt_isr at /home/larzuk/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x40377181: _xt_lowint1 at /home/larzuk/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x42006508: uart_ll_get_txfifo_len at /home/larzuk/esp/esp-idf/components/hal/esp32s3/include/hal/uart_ll.h:390
+ (inlined by) uart_tx_char at /home/larzuk/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:170
+0x420073b9: uart_write at /home/larzuk/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:218
+0x420086c5: esp_vfs_write at /home/larzuk/esp/esp-idf/components/vfs/vfs.c:502 (discriminator 4)
+0x4200e416: write at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/syscalls/syswrite.c:11 (discriminator 1)
+0x42008214: console_write at /home/larzuk/esp/esp-idf/components/esp_vfs_console/vfs_console.c:67
+0x420086c5: esp_vfs_write at /home/larzuk/esp/esp-idf/components/vfs/vfs.c:502 (discriminator 4)
+0x4200de56: __swrite at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+0x4200d719: __sflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+0x4200d76a: _fflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+0x4200dd5d: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x42011d8f: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x4201176d: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x4200decd: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x42019d09: esp_log_writev at /home/larzuk/esp/esp-idf/components/log/log.c:210
+0x4037ffad: esp_log_write at /home/larzuk/esp/esp-idf/components/log/log.c:220
+0x42008e3d: app_main at /home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/main/main.c:14 (discriminator 2)
+0x420194e7: main_task at /home/larzuk/esp/esp-idf/components/freertos/app_startup.c:208
+0x4037a349: vPortTaskWrapper at /home/larzuk/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x4200a8c7: task_wdt_timeout_handling at /home/larzuk/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4200ace4: task_wdt_isr at /home/larzuk/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x40377181: _xt_lowint1 at /home/larzuk/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x42006502: uart_ll_get_txfifo_len at /home/larzuk/esp/esp-idf/components/hal/esp32s3/include/hal/uart_ll.h:390
+ (inlined by) uart_tx_char at /home/larzuk/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:170
+0x420073d7: uart_write at /home/larzuk/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:223
+0x420086c5: esp_vfs_write at /home/larzuk/esp/esp-idf/components/vfs/vfs.c:502 (discriminator 4)
+0x4200e416: write at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/syscalls/syswrite.c:11 (discriminator 1)
+0x42008214: console_write at /home/larzuk/esp/esp-idf/components/esp_vfs_console/vfs_console.c:67
+0x420086c5: esp_vfs_write at /home/larzuk/esp/esp-idf/components/vfs/vfs.c:502 (discriminator 4)
+0x4200de56: __swrite at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+0x4200d719: __sflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+0x4200d76a: _fflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+0x4200dd5d: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x42011d8f: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x4201176d: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x4200decd: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x42019d09: esp_log_writev at /home/larzuk/esp/esp-idf/components/log/log.c:210
+0x4037ffad: esp_log_write at /home/larzuk/esp/esp-idf/components/log/log.c:220
+0x42008e3d: app_main at /home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/main/main.c:14 (discriminator 2)
+0x420194e7: main_task at /home/larzuk/esp/esp-idf/components/freertos/app_startup.c:208
+0x4037a349: vPortTaskWrapper at /home/larzuk/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x4200a8c7: task_wdt_timeout_handling at /home/larzuk/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4200ace4: task_wdt_isr at /home/larzuk/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x40377181: _xt_lowint1 at /home/larzuk/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x42006502: uart_ll_get_txfifo_len at /home/larzuk/esp/esp-idf/components/hal/esp32s3/include/hal/uart_ll.h:390
+ (inlined by) uart_tx_char at /home/larzuk/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:170
+0x420073d7: uart_write at /home/larzuk/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:223
+0x420086c5: esp_vfs_write at /home/larzuk/esp/esp-idf/components/vfs/vfs.c:502 (discriminator 4)
+0x4200e416: write at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/syscalls/syswrite.c:11 (discriminator 1)
+0x42008214: console_write at /home/larzuk/esp/esp-idf/components/esp_vfs_console/vfs_console.c:67
+0x420086c5: esp_vfs_write at /home/larzuk/esp/esp-idf/components/vfs/vfs.c:502 (discriminator 4)
+0x4200de56: __swrite at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+0x4200d719: __sflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+0x4200d76a: _fflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+0x4200dd5d: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x42011d8f: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x4201176d: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x4200decd: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x42019d09: esp_log_writev at /home/larzuk/esp/esp-idf/components/log/log.c:210
+0x4037ffad: esp_log_write at /home/larzuk/esp/esp-idf/components/log/log.c:220
+0x42008e3d: app_main at /home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/main/main.c:14 (discriminator 2)
+0x420194e7: main_task at /home/larzuk/esp/esp-idf/components/freertos/app_startup.c:208
+0x4037a349: vPortTaskWrapper at /home/larzuk/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x4200a8c7: task_wdt_timeout_handling at /home/larzuk/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4200ace4: task_wdt_isr at /home/larzuk/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x40377181: _xt_lowint1 at /home/larzuk/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x42006508: uart_ll_get_txfifo_len at /home/larzuk/esp/esp-idf/components/hal/esp32s3/include/hal/uart_ll.h:390
+ (inlined by) uart_tx_char at /home/larzuk/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:170
+0x420073d7: uart_write at /home/larzuk/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:223
+0x420086c5: esp_vfs_write at /home/larzuk/esp/esp-idf/components/vfs/vfs.c:502 (discriminator 4)
+0x4200e416: write at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/syscalls/syswrite.c:11 (discriminator 1)
+0x42008214: console_write at /home/larzuk/esp/esp-idf/components/esp_vfs_console/vfs_console.c:67
+0x420086c5: esp_vfs_write at /home/larzuk/esp/esp-idf/components/vfs/vfs.c:502 (discriminator 4)
+0x4200de56: __swrite at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+0x4200d719: __sflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+0x4200d76a: _fflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+0x4200dd5d: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x42011d8f: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x4201176d: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x4200decd: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x42019d09: esp_log_writev at /home/larzuk/esp/esp-idf/components/log/log.c:210
+0x4037ffad: esp_log_write at /home/larzuk/esp/esp-idf/components/log/log.c:220
+0x42008e3d: app_main at /home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/main/main.c:14 (discriminator 2)
+0x420194e7: main_task at /home/larzuk/esp/esp-idf/components/freertos/app_startup.c:208
+0x4037a349: vPortTaskWrapper at /home/larzuk/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x4200a8c7: task_wdt_timeout_handling at /home/larzuk/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4200ace4: task_wdt_isr at /home/larzuk/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x40377181: _xt_lowint1 at /home/larzuk/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x42006502: uart_ll_get_txfifo_len at /home/larzuk/esp/esp-idf/components/hal/esp32s3/include/hal/uart_ll.h:390
+ (inlined by) uart_tx_char at /home/larzuk/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:170
+0x420073d7: uart_write at /home/larzuk/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:223
+0x420086c5: esp_vfs_write at /home/larzuk/esp/esp-idf/components/vfs/vfs.c:502 (discriminator 4)
+0x4200e416: write at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/syscalls/syswrite.c:11 (discriminator 1)
+0x42008214: console_write at /home/larzuk/esp/esp-idf/components/esp_vfs_console/vfs_console.c:67
+0x420086c5: esp_vfs_write at /home/larzuk/esp/esp-idf/components/vfs/vfs.c:502 (discriminator 4)
+0x4200de56: __swrite at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+0x4200d719: __sflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+0x4200d76a: _fflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+0x4200dd5d: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x42011d8f: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x4201176d: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x4200decd: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x42019d09: esp_log_writev at /home/larzuk/esp/esp-idf/components/log/log.c:210
+0x4037ffad: esp_log_write at /home/larzuk/esp/esp-idf/components/log/log.c:220
+0x42008e3d: app_main at /home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/main/main.c:14 (discriminator 2)
+0x420194e7: main_task at /home/larzuk/esp/esp-idf/components/freertos/app_startup.c:208
+0x4037a349: vPortTaskWrapper at /home/larzuk/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x4200a8c7: task_wdt_timeout_handling at /home/larzuk/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4200ace4: task_wdt_isr at /home/larzuk/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x40377181: _xt_lowint1 at /home/larzuk/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x42006502: uart_ll_get_txfifo_len at /home/larzuk/esp/esp-idf/components/hal/esp32s3/include/hal/uart_ll.h:390
+ (inlined by) uart_tx_char at /home/larzuk/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:170
+0x420073d7: uart_write at /home/larzuk/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:223
+0x420086c5: esp_vfs_write at /home/larzuk/esp/esp-idf/components/vfs/vfs.c:502 (discriminator 4)
+0x4200e416: write at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/syscalls/syswrite.c:11 (discriminator 1)
+0x42008214: console_write at /home/larzuk/esp/esp-idf/components/esp_vfs_console/vfs_console.c:67
+0x420086c5: esp_vfs_write at /home/larzuk/esp/esp-idf/components/vfs/vfs.c:502 (discriminator 4)
+0x4200de56: __swrite at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+0x4200d719: __sflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+0x4200d76a: _fflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+0x4200dd5d: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x42011d8f: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x4201176d: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x4200decd: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x42019d09: esp_log_writev at /home/larzuk/esp/esp-idf/components/log/log.c:210
+0x4037ffad: esp_log_write at /home/larzuk/esp/esp-idf/components/log/log.c:220
+0x42008e3d: app_main at /home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/main/main.c:14 (discriminator 2)
+0x420194e7: main_task at /home/larzuk/esp/esp-idf/components/freertos/app_startup.c:208
+0x4037a349: vPortTaskWrapper at /home/larzuk/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x4200a8c7: task_wdt_timeout_handling at /home/larzuk/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4200ace4: task_wdt_isr at /home/larzuk/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x40377181: _xt_lowint1 at /home/larzuk/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x42006508: uart_ll_get_txfifo_len at /home/larzuk/esp/esp-idf/components/hal/esp32s3/include/hal/uart_ll.h:390
+ (inlined by) uart_tx_char at /home/larzuk/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:170
+0x420073d7: uart_write at /home/larzuk/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:223
+0x420086c5: esp_vfs_write at /home/larzuk/esp/esp-idf/components/vfs/vfs.c:502 (discriminator 4)
+0x4200e416: write at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/syscalls/syswrite.c:11 (discriminator 1)
+0x42008214: console_write at /home/larzuk/esp/esp-idf/components/esp_vfs_console/vfs_console.c:67
+0x420086c5: esp_vfs_write at /home/larzuk/esp/esp-idf/components/vfs/vfs.c:502 (discriminator 4)
+0x4200de56: __swrite at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+0x4200d719: __sflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+0x4200d76a: _fflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+0x4200dd5d: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x42011d8f: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x4201176d: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x4200decd: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x42019d09: esp_log_writev at /home/larzuk/esp/esp-idf/components/log/log.c:210
+0x4037ffad: esp_log_write at /home/larzuk/esp/esp-idf/components/log/log.c:220
+0x42008e3d: app_main at /home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/main/main.c:14 (discriminator 2)
+0x420194e7: main_task at /home/larzuk/esp/esp-idf/components/freertos/app_startup.c:208
+0x4037a349: vPortTaskWrapper at /home/larzuk/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x4200a8c7: task_wdt_timeout_handling at /home/larzuk/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4200ace4: task_wdt_isr at /home/larzuk/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x40377181: _xt_lowint1 at /home/larzuk/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x42006508: uart_ll_get_txfifo_len at /home/larzuk/esp/esp-idf/components/hal/esp32s3/include/hal/uart_ll.h:390
+ (inlined by) uart_tx_char at /home/larzuk/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:170
+0x420073d7: uart_write at /home/larzuk/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:223
+0x420086c5: esp_vfs_write at /home/larzuk/esp/esp-idf/components/vfs/vfs.c:502 (discriminator 4)
+0x4200e416: write at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/syscalls/syswrite.c:11 (discriminator 1)
+0x42008214: console_write at /home/larzuk/esp/esp-idf/components/esp_vfs_console/vfs_console.c:67
+0x420086c5: esp_vfs_write at /home/larzuk/esp/esp-idf/components/vfs/vfs.c:502 (discriminator 4)
+0x4200de56: __swrite at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+0x4200d719: __sflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+0x4200d76a: _fflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+0x4200dd5d: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x42011d8f: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x4201176d: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x4200decd: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x42019d09: esp_log_writev at /home/larzuk/esp/esp-idf/components/log/log.c:210
+0x4037ffad: esp_log_write at /home/larzuk/esp/esp-idf/components/log/log.c:220
+0x42008e3d: app_main at /home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/main/main.c:14 (discriminator 2)
+0x420194e7: main_task at /home/larzuk/esp/esp-idf/components/freertos/app_startup.c:208
+0x4037a349: vPortTaskWrapper at /home/larzuk/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x4200a8c7: task_wdt_timeout_handling at /home/larzuk/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4200ace4: task_wdt_isr at /home/larzuk/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x40377181: _xt_lowint1 at /home/larzuk/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x42006508: uart_ll_get_txfifo_len at /home/larzuk/esp/esp-idf/components/hal/esp32s3/include/hal/uart_ll.h:390
+ (inlined by) uart_tx_char at /home/larzuk/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:170
+0x420073d7: uart_write at /home/larzuk/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:223
+0x420086c5: esp_vfs_write at /home/larzuk/esp/esp-idf/components/vfs/vfs.c:502 (discriminator 4)
+0x4200e416: write at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/syscalls/syswrite.c:11 (discriminator 1)
+0x42008214: console_write at /home/larzuk/esp/esp-idf/components/esp_vfs_console/vfs_console.c:67
+0x420086c5: esp_vfs_write at /home/larzuk/esp/esp-idf/components/vfs/vfs.c:502 (discriminator 4)
+0x4200de56: __swrite at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+0x4200d719: __sflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+0x4200d76a: _fflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+0x4200dd5d: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x42011d8f: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x4201176d: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x4200decd: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x42019d09: esp_log_writev at /home/larzuk/esp/esp-idf/components/log/log.c:210
+0x4037ffad: esp_log_write at /home/larzuk/esp/esp-idf/components/log/log.c:220
+0x42008e3d: app_main at /home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/main/main.c:14 (discriminator 2)
+0x420194e7: main_task at /home/larzuk/esp/esp-idf/components/freertos/app_startup.c:208
+0x4037a349: vPortTaskWrapper at /home/larzuk/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33mRunning /home/larzuk/.espressif/python_env/idf5.3_py3.11_env/bin/python /home/larzuk/esp/esp-idf/tools/idf.py flash...[0m
+ninja failed with exit code 1, output of the command is in the /home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/build/log/idf_py_stderr_output_334761 and /home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/build/log/idf_py_stdout_output_334761
+[1;31m--- Build failed[0m
+[1;31m--- Press Ctrl+] to exit monitor.
+--- Press Ctrl+F to build & flash project.
+--- Press Ctrl+A to build & flash app.
+--- Press any other key to resume monitor (resets target).
+[0m
+[0;33m0x4200650b: uart_ll_get_txfifo_len at /home/larzuk/esp/esp-idf/components/hal/esp32s3/include/hal/uart_ll.h:390
+ (inlined by) uart_tx_char at /home/larzuk/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:170
+[0m
+[0;33mRunning /home/larzuk/.espressif/python_env/idf5.3_py3.11_env/bin/python /home/larzuk/esp/esp-idf/tools/idf.py flash...[0m
+ninja failed with exit code 1, output of the command is in the /home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/build/log/idf_py_stderr_output_335835 and /home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/build/log/idf_py_stdout_output_335835
+[1;31m--- Build failed[0m
+[1;31m--- Press Ctrl+] to exit monitor.
+--- Press Ctrl+F to build & flash project.
+--- Press Ctrl+A to build & flash app.
+--- Press any other key to resume monitor (resets target).
+[0m
+[0;33m0x42006503: uart_ll_get_txfifo_len at /home/larzuk/esp/esp-idf/components/hal/esp32s3/include/hal/uart_ll.h:390
+ (inlined by) uart_tx_char at /home/larzuk/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:170
+[0m
+[0m

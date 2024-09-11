@@ -1,0 +1,1072 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048dfc
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x178c
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xcb8
+load:0x403cb700,len:0x2db0
+entry 0x403c8914
+[0;32mI (26) boot: ESP-IDF v5.3.1-244-g4d0db7045d 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Sep 11 2024 22:23:49[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v0.2[0m
+[0;32mI (35) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (40) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (44) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (49) boot: Enabling RNG early entropy source...[0m
+[0;32mI (55) boot: Partition Table:[0m
+[0;32mI (58) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (73) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (80) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (88) boot: End of partition table[0m
+[0;32mI (92) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0b4f4h ( 46324) map[0m
+[0;32mI (109) esp_image: segment 1: paddr=0001b51c vaddr=3fc92300 size=02ae4h ( 10980) load[0m
+[0;32mI (112) esp_image: segment 2: paddr=0001e008 vaddr=40374000 size=02010h (  8208) load[0m
+[0;32mI (119) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=19d70h (105840) map[0m
+[0;32mI (145) esp_image: segment 4: paddr=00039d98 vaddr=40376010 size=0c1e4h ( 49636) load[0m
+[0;32mI (156) esp_image: segment 5: paddr=00045f84 vaddr=600fe100 size=00004h (     4) load[0m
+[0;32mI (162) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (163) boot: Disabling RNG early entropy source...[0m
+[0;32mI (177) cpu_start: Multicore app[0m
+[0;32mI (186) cpu_start: Pro cpu start user code[0m
+[0;32mI (186) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (186) app_init: Application information:[0m
+[0;32mI (189) app_init: Project name:     main[0m
+[0;32mI (193) app_init: App version:      e7e35a1-dirty[0m
+[0;32mI (199) app_init: Compile time:     Sep 11 2024 22:23:44[0m
+[0;32mI (205) app_init: ELF file SHA256:  aebeeb308...[0m
+[0;32mI (210) app_init: ESP-IDF:          v5.3.1-244-g4d0db7045d[0m
+[0;32mI (216) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (221) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (226) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (231) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (238) heap_init: At 3FC956E8 len 00054028 (336 KiB): RAM[0m
+[0;32mI (244) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (250) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (256) heap_init: At 600FE104 len 00001EE4 (7 KiB): RTCRAM[0m
+[0;32mI (264) spi_flash: detected chip: gd[0m
+[0;32mI (267) spi_flash: flash io: dio[0m
+[0;33mW (271) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (284) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (291) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (298) main_task: Started on CPU0[0m
+[0;32mI (308) main_task: Calling app_main()[0m
+[0;32mI (308) WHACKDECK: Battery level: 262.00 [0m
+[0;32mI (308) WHACKDECK: Battery level: 268.00 [0m
+[0;32mI (318) WHACKDECK: Battery level: 268.00 [0m
+[0;32mI (318) WHACKDECK: Battery level: 270.00 [0m
+[0;32mI (328) WHACKDECK: Battery level: 264.00 [0m
+[0;32mI (328) WHACKDECK: Battery level: 262.00 [0m
+[0;32mI (338) WHACKDECK: Battery level: 260.00 [0m
+[0;32mI (338) WHACKDECK: Battery level: 260.00 [0m
+[0;32mI (348) WHACKDECK: Battery level: 256.00 [0m
+[0;32mI (348) WHACKDECK: Battery level: 262.00 [0m
+[0;32mI (348) WHACKDECK: Battery level: 260.00 [0m
+[0;32mI (358) WHACKDECK: Battery level: 250.00 [0m
+[0;32mI (358) WHACKDECK: Battery level: 254.00 [0m
+[0;32mI (368) WHACKDECK: Battery level: 254.00 [0m
+[0;32mI (368) WHACKDECK: Battery level: 252.00 [0m
+[0;32mI (378) WHACKDECK: Battery level: 254.00 [0m
+[0;32mI (378) WHACKDECK: Battery level: 254.00 [0m
+[0;32mI (388) WHACKDECK: Battery level: 248.00 [0m
+[0;32mI (388) WHACKDECK: Battery level: 250.00 [0m
+[0;32mI (398) WHACKDECK: Battery level: 246.00 [0m
+[0;32mI (398) WHACKDECK: Battery level: 244.00 [0m
+[0;32mI (408) WHACKDECK: Battery level: 244.00 [0m
+[0;32mI (408) WHACKDECK: Battery level: 248.00 [0m
+[0;32mI (418) WHACKDECK: Battery level: 244.00 [0m
+[0;32mI (418) WHACKDECK: Battery level: 248.00 [0m
+[0;32mI (428) WHACKDECK: Battery level: 244.00 [0m
+[0;32mI (428) WHACKDECK: Battery level: 240.00 [0m
+[0;32mI (428) WHACKDECK: Battery level: 242.00 [0m
+[0;32mI (438) WHACKDECK: Battery level: 242.00 [0m
+[0;32mI (438) WHACKDECK: Battery level: 242.00 [0m
+[0;32mI (448) WHACKDECK: Battery level: 238.00 [0m
+[0;32mI (448) WHACKDECK: Battery level: 238.00 [0m
+[0;32mI (458) WHACKDECK: Battery level: 236.00 [0m
+[0;32mI (458) WHACKDECK: Battery level: 236.00 [0m
+[0;32mI (468) WHACKDECK: Battery level: 238.00 [0m
+[0;32mI (468) WHACKDECK: Battery level: 236.00 [0m
+[0;32mI (478) WHACKDECK: Battery level: 236.00 [0m
+[0;32mI (478) WHACKDECK: Battery level: 240.00 [0m
+[0;32mI (488) WHACKDECK: Battery level: 222.00 [0m
+[0;32mI (488) WHACKDECK: Battery level: 220.00 [0m
+Executing action: flash
+Running ninja in directory /home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/build
+Executing "ninja flash"...
+[1/5] cd /home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/build/esp-idf/esptool_py && /home/larzuk/.espressif/python_env/idf5.3_py3.11_env/bin/python /home/larzuk/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/build/partition_table/partition-table.bin /home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/build/main.bin
+main.bin binary size 0x35fc0 bytes. Smallest app partition is 0x100000 bytes. 0xca040 bytes (79%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cd /home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/build/bootloader/esp-idf/esptool_py && /home/larzuk/.espressif/python_env/idf5.3_py3.11_env/bin/python /home/larzuk/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/build/bootloader/bootloader.bin
+Bootloader binary size 0x5260 bytes. 0x2da0 bytes (36%) free.
+[3/5] No install step for 'bootloader'
+[4/5] Completed 'bootloader'
+[4/5] cd /home/larzuk/esp/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/larzuk/esp/esp-idf -D "SERIAL_TOOL=/home/larzuk/.espressif/python_env/idf5.3_py3.11_env/bin/python;;/home/larzuk/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32s3" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/build -P /home/larzuk/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32s3 -p /dev/ttyACM0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 main.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.8.dev5
+Serial port /dev/ttyACM0
+Connecting...
+Chip is ESP32-S3 (QFN56) (revision v0.2)
+Features: WiFi, BLE, Embedded PSRAM 8MB (AP_3v3)
+Crystal is 40MHz
+MAC: 48:ca:43:31:3e:ac
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x00045fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 21088 bytes to 13066...
+Writing at 0x00000000... (100 %)
+Wrote 21088 bytes (13066 compressed) at 0x00000000 in 0.4 seconds (effective 447.7 kbit/s)...
+Hash of data verified.
+Compressed 221120 bytes to 115165...
+Writing at 0x00010000... (12 %)
+Writing at 0x0001cf8c... (25 %)
+Writing at 0x00023637... (37 %)
+Writing at 0x0002a08a... (50 %)
+Writing at 0x00030a04... (62 %)
+Writing at 0x00039536... (75 %)
+Writing at 0x0003f29b... (87 %)
+Writing at 0x00045d74... (100 %)
+Wrote 221120 bytes (115165 compressed) at 0x00010000 in 1.8 seconds (effective 978.6 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 520.2 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+Done
+[0;32mI (109) esp_image: segment 1: paddr=0001b51c vaddr=3fc923ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x42004f96
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x178c
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xcb8
+load:0x403cb700,len:0x2db0
+entry 0x403c8914
+[0;32mI (26) boot: ESP-IDF v5.3.1-244-g4d0db7045d 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Sep 11 2024 22:23:49[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v0.2[0m
+[0;32mI (35) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (40) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (44) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (49) boot: Enabling RNG early entropy source...[0m
+[0;32mI (55) boot: Partition Table:[0m
+[0;32mI (58) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (73) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (80) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (88) boot: End of partition table[0m
+[0;32mI (92) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0b4f4h ( 46324) map[0m
+[0;32mI (109) esp_image: segment 1: paddr=0001b51c vaddr=3fc92300 size=02ae4h ( 10980) load[0m
+[0;32mI (112) esp_image: segment 2: paddr=0001e008 vaddr=40374000 size=02010h (  8208) load[0m
+[0;32mI (119) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=19d78h (105848) map[0m
+[0;32mI (145) esp_image: segment 4: paddr=00039da0 vaddr=40376010 size=0c1e4h ( 49636) load[0m
+[0;32mI (156) esp_image: segment 5: paddr=00045f8c vaddr=600fe100 size=00004h (     4) load[0m
+[0;32mI (162) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (163) boot: Disabling RNG early entropy source...[0m
+[0;32mI (177) cpu_start: Multicore app[0m
+[0;32mI (186) cpu_start: Pro cpu start user code[0m
+[0;32mI (186) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (186) app_init: Application information:[0m
+[0;32mI (189) app_init: Project name:     main[0m
+[0;32mI (193) app_init: App version:      e7e35a1-dirty[0m
+[0;32mI (199) app_init: Compile time:     Sep 11 2024 22:23:44[0m
+[0;32mI (205) app_init: ELF file SHA256:  25aa2fe15...[0m
+[0;32mI (210) app_init: ESP-IDF:          v5.3.1-244-g4d0db7045d[0m
+[0;32mI (216) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (221) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (226) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (231) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (238) heap_init: At 3FC956E8 len 00054028 (336 KiB): RAM[0m
+[0;32mI (244) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (250) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (256) heap_init: At 600FE104 len 00001EE4 (7 KiB): RTCRAM[0m
+[0;32mI (264) spi_flash: detected chip: gd[0m
+[0;32mI (267) spi_flash: flash io: dio[0m
+[0;33mW (271) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (284) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (291) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (298) main_task: Started on CPU0[0m
+[0;32mI (308) main_task: Calling app_main()[0m
+[0;32mI (308) WHACKDECK: Battery level: 514.00 [0m
+[0;32mI (1308) WHACKDECK: Battery level: 238.00 [0m
+[0;32mI (2308) WHACKDECK: Battery level: 102.00 [0m
+[0;32mI (3308) WHACKDECK: Battery level: 36.00 [0m
+[0;32mI (4308) WHACKDECK: Battery level: 4.00 [0m
+[0;32mI (5308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (6308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (7308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (8308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (9308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (10308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (11308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (12308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (13308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (14308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (15308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (16308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (17308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (18308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (19308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (20308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (21308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (22308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (23308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (24308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (25308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (26308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (27308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (28308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (29308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (30308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (31308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (32308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (33308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (34308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (35308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (36308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (37308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (38308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (39308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (40308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (41308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (42308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (43308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (44308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (45308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (46308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (47308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (48308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (49308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (50308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (51308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (52308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (53308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (54308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (55308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (56308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (57308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (58308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (59308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (60308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (61308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (62308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (63308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (64308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (65308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (66308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (67308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (68308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (69308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (70308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (71308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (72308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (73308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (74308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (75308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (76308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (77308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (78308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (79308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (80308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (81308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (82308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (83308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (84308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (85308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (86308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (87308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (88308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (89308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (90308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (91308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (92308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (93308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (94308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (95308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (96308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (97308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (98308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (99308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (100308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (101308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (102308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (103308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (104308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (105308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (106308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (107308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (108308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (109308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (110308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (111308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (112308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (113308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (114308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (115308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (116308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (117308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (118308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (119308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (120308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (121308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (122308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (123308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (124308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (125308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (126308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (127308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (128308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (129308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (130308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (131308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (132308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (133308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (134308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (135308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (136308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (137308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (138308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (139308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (140308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (141308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (142308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (143308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (144308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (145308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (146308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (147308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (148308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (149308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (150308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (151308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (152308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (153308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (154308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (155308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (156308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (157308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (158308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (159308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (160308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (161308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (162308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (163308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (164308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (165308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (166308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (167308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (168308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (169308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (170308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (171308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (172308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (173308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (174308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (175308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (176308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (177308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (178308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (179308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (180308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (181308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (182308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (183308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (184308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (185308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (186308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (187308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (188308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (189308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (190308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (191308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (192308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (193308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (194308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (195308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (196308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (197308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (198308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (199308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (200308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (201308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (202308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (203308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (204308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (205308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (206308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (207308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (208308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (209308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (210308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (211308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (212308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (213308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (214308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (215308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (216308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (217308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (218308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (219308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (220308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (221308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (222308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (223308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (224308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (225308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (226308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (227308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (228308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (229308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (230308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (231308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (232308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (233308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (234308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (235308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (236308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (237308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (238308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (239308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (240308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (241308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (242308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (243308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (244308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (245308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (246308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (247308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (248308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (249308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (250308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (251308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (252308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (253308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (254308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (255308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (256308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (257308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (258308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (259308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (260308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (261308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (262308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (263308) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (264308) WHACKDECK: Battery level: 0.00 [0m
+I BOD: Brownout detector was triggered
+
+[0;32mI (1318) WHACKDECK: Battery level: 976.00 [0m
+[0;32mI (2318) WHACKDECK: Battery level: 488.00 [0m
+[0;32mI (3318) WHACKDECK: Battery level: 248.00 [0m
+[0;32mI (4318) WHACKDECK: Battery level: 106.00 [0m
+[0;32mI (5318) WHACKDECK: Battery level: 50.00 [0m
+[0;32mI (6318) WHACKDECK: Battery level: 10.00 [0m
+[0;32mI (7318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (8318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (9318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (10318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (11318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (12318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (13318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (14318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (15318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (16318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (17318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (18318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (19318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (20318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (21318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (22318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (23318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (24318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (25318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (26318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (27318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (28318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (29318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (30318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (31318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (32318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (33318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (34318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (35318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (36318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (37318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (38318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (39318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (40318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (41318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (42318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (43318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (44318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (45318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (46318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (47318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (48318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (49318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (50318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (51318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (52318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (53318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (54318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (55318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (56318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (57318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (58318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (59318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (60318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (61318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (62318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (63318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (64318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (65318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (66318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (67318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (68318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (69318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (70318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (71318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (72318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (73318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (74318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (75318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (76318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (77318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (78318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (79318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (80318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (81318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (82318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (83318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (84318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (85318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (86318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (87318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (88318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (89318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (90318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (91318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (92318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (93318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (94318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (95318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (96318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (97318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (98318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (99318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (100318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (101318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (102318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (103318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (104318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (105318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (106318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (107318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (108318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (109318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (110318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (111318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (112318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (113318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (114318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (115318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (116318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (117318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (118318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (119318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (120318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (121318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (122318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (123318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (124318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (125318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (126318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (127318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (128318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (129318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (130318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (131318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (132318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (133318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (134318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (135318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (136318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (137318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (138318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (139318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (140318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (141318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (142318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (143318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (144318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (145318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (146318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (147318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (148318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (149318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (150318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (151318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (152318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (153318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (154318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (155318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (156318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (157318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (158318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (159318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (160318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (161318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (162318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (163318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (164318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (165318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (166318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (167318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (168318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (169318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (170318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (171318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (172318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (173318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (174318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (175318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (176318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (177318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (178318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (179318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (180318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (181318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (182318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (183318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (184318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (185318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (186318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (187318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (188318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (189318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (190318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (191318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (192318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (193318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (194318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (195318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (196318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (197318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (198318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (199318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (200318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (201318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (202318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (203318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (204318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (205318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (206318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (207318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (208318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (209318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (210318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (211318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (212318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (213318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (214318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (215318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (216318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (217318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (218318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (219318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (220318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (221318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (222318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (223318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (224318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (225318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (226318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (227318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (228318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (229318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (230318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (231318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (232318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (233318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (234318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (235318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (236318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (237318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (238318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (239318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (240318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (241318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (242318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (243318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (244318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (245318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (246318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (247318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (248318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (249318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (250318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (251318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (252318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (253318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (254318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (255318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (256318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (257318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (258318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (259318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (260318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (261318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (262318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (263318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (264318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (265318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (266318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (267318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (268318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (269318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (270318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (271318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (272318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (273318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (274318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (275318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (276318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (277318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (278318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (279318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (280318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (281318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (282318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (283318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (284318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (285318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (286318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (287318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (288318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (289318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (290318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (291318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (292318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (293318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (294318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (295318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (296318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (297318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (298318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (299318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (300318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (301318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (302318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (303318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (304318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (305318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (306318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (307318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (308318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (309318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (310318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (311318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (312318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (313318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (314318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (315318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (316318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (317318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (318318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (319318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (320318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (321318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (322318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (323318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (324318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (325318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (326318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (327318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (328318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (329318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (330318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (331318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (332318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (333318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (334318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (335318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (336318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (337318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (338318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (339318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (340318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (341318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (342318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (343318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (344318) WHACKDECK: Battery level: 0.00 [0m
+Executing action: flash
+Running ninja in directory /home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/build
+Executing "ninja flash"...
+[1/10] Building C object esp-idf/tdeck-lib/CMakeFiles/__idf_tdeck-lib.dir/tdeck-lib.c.obj
+[2/10] Performing build step for 'bootloader'
+[1/1] cd /home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/build/bootloader/esp-idf/esptool_py && /home/larzuk/.espressif/python_env/idf5.3_py3.11_env/bin/python /home/larzuk/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/build/bootloader/bootloader.bin
+Bootloader binary size 0x5260 bytes. 0x2da0 bytes (36%) free.
+[3/10] Linking C static library esp-idf/tdeck-lib/libtdeck-lib.a
+[4/10] No install step for 'bootloader'
+[5/10] Completed 'bootloader'
+[6/10] Generating ld/sections.ld
+[7/10] Linking CXX executable main.elf
+[8/10] Generating binary image from built executable
+esptool.py v4.8.dev5
+Creating esp32s3 image...
+Merged 2 ELF sections
+Successfully created esp32s3 image.
+Generated /home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/build/main.bin
+[9/10] cd /home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/build/esp-idf/esptool_py && /home/larzuk/.espressif/python_env/idf5.3_py3.11_env/bin/python /home/larzuk/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/build/partition_table/partition-table.bin /home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/build/main.bin
+main.bin binary size 0x36020 bytes. Smallest app partition is 0x100000 bytes. 0xc9fe0 bytes (79%) free.
+[9/10] cd /home/larzuk/esp/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/larzuk/esp/esp-idf -D "SERIAL_TOOL=/home/larzuk/.espressif/python_env/idf5.3_py3.11_env/bin/python;;/home/larzuk/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32s3" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/build -P /home/larzuk/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32s3 -p /dev/ttyACM0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 main.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.8.dev5
+Serial port /dev/ttyACM0
+Connecting...
+Chip is ESP32-S3 (QFN56) (revision v0.2)
+Features: WiFi, BLE, Embedded PSRAM 8MB (AP_3v3)
+Crystal is 40MHz
+MAC: 48:ca:43:31:3e:ac
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x00046fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 21088 bytes to 13066...
+Writing at 0x00000000... (100 %)
+Wrote 21088 bytes (13066 compressed) at 0x00000000 in 0.4 seconds (effective 461.5 kbit/s)...
+Hash of data verified.
+Compressed 221216 bytes to 115236...
+Writing at 0x00010000... (12 %)
+Writing at 0x0001cf25... (25 %)
+Writing at 0x0002362e... (37 %)
+Writing at 0x0002a062... (50 %)
+Writing at 0x00030a05... (62 %)
+Writing at 0x0003954b... (75 %)
+Writing at 0x0003f26d... (87 %)
+Writing at 0x00045d80... (100 %)
+Wrote 221216 bytes (115236 compressed) at 0x00010000 in 1.8 seconds (effective 958.5 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 521.1 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+Done
+[0;32mI (109) esp_image: segment 1: paddr=0001b55c vaddr=3fc923[0;32mI (177) cpu_start: Multicore app[0m
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40041a76
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x178c
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xcb8
+load:0x403cb700,len:0x2db0
+entry 0x403c8914
+[0;32mI (26) boot: ESP-IDF v5.3.1-244-g4d0db7045d 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Sep 11 2024 22:23:49[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v0.2[0m
+[0;32mI (35) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (40) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (44) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (49) boot: Enabling RNG early entropy source...[0m
+[0;32mI (55) boot: Partition Table:[0m
+[0;32mI (58) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (73) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (80) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (88) boot: End of partition table[0m
+[0;32mI (92) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0b534h ( 46388) map[0m
+[0;32mI (109) esp_image: segment 1: paddr=0001b55c vaddr=3fc92300 size=02ae4h ( 10980) load[0m
+[0;32mI (112) esp_image: segment 2: paddr=0001e048 vaddr=40374000 size=01fd0h (  8144) load[0m
+[0;32mI (119) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=19da4h (105892) map[0m
+[0;32mI (145) esp_image: segment 4: paddr=00039dcc vaddr=40375fd0 size=0c224h ( 49700) load[0m
+[0;32mI (156) esp_image: segment 5: paddr=00045ff8 vaddr=600fe100 size=00004h (     4) load[0m
+[0;32mI (162) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (163) boot: Disabling RNG early entropy source...[0m
+[0;32mI (177) cpu_start: Multicore app[0m
+[0;32mI (186) cpu_start: Pro cpu start user code[0m
+[0;32mI (186) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (186) app_init: Application information:[0m
+[0;32mI (189) app_init: Project name:     main[0m
+[0;32mI (193) app_init: App version:      e7e35a1-dirty[0m
+[0;32mI (199) app_init: Compile time:     Sep 11 2024 22:23:44[0m
+[0;32mI (205) app_init: ELF file SHA256:  18bc9ad06...[0m
+[0;32mI (210) app_init: ESP-IDF:          v5.3.1-244-g4d0db7045d[0m
+[0;32mI (216) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (221) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (226) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (231) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (238) heap_init: At 3FC956E8 len 00054028 (336 KiB): RAM[0m
+[0;32mI (244) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (250) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (256) heap_init: At 600FE104 len 00001EE4 (7 KiB): RTCRAM[0m
+[0;32mI (264) spi_flash: detected chip: gd[0m
+[0;32mI (267) spi_flash: flash io: dio[0m
+[0;33mW (271) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (284) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (291) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (298) main_task: Started on CPU0[0m
+[0;32mI (308) main_task: Calling app_main()[0m
+[0;32mI (308) TDECKLIB: Calibration Success[0m
+[0;32mI (308) WHACKDECK: Battery level: 492.00 [0m
+[0;32mI (1318) WHACKDECK: Battery level: 224.00 [0m
+[0;32mI (2318) WHACKDECK: Battery level: 96.00 [0m
+[0;32mI (3318) WHACKDECK: Battery level: 36.00 [0m
+[0;32mI (4318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (5318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (6318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (7318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (8318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (9318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (10318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (11318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (12318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (13318) WHACKDECK: Battery level: 0.00 [0m
+I BOD: Brownout detector was triggered
+
+
+[0;32mI (2318) WHACKDECK: Battery level: 486.00 [0m
+[0;32mI (3318) WHACKDECK: Battery level: 248.00 [0m
+[0;32mI (4318) WHACKDECK: Battery level: 112.00 [0m
+[0;32mI (5318) WHACKDECK: Battery level: 46.00 [0m
+[0;32mI (6318) WHACKDECK: Battery level: 10.00 [0m
+[0;32mI (7318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (8318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (9318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (10318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (11318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (12318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (13318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (14318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (15318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (16318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (17318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (18318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (19318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (20318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (21318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (22318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (23318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (24318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (25318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (26318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (27318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (28318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (29318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (30318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (31318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (32318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (33318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (34318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (35318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (36318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (37318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (38318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (39318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (40318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (41318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (42318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (43318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (44318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (45318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (46318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (47318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (48318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (49318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (50318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (51318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (52318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (53318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (54318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (55318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (56318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (57318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (58318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (59318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (60318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (61318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (62318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (63318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (64318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (65318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (66318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (67318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (68318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (69318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (70318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (71318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (72318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (73318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (74318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (75318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (76318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (77318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (78318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (79318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (80318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (81318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (82318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (83318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (84318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (85318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (86318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (87318) WHACKDECK: Battery level: 0.00 [0m
+[0;32mI (88318) WHACKDECK: Battery level: 0.00 [0m
+Executing action: flash
+Running ninja in directory /home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/build
+Executing "ninja flash"...
+[1/10] Performing build step for 'bootloader'
+[1/1] cd /home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/build/bootloader/esp-idf/esptool_py && /home/larzuk/.espressif/python_env/idf5.3_py3.11_env/bin/python /home/larzuk/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/build/bootloader/bootloader.bin
+Bootloader binary size 0x5260 bytes. 0x2da0 bytes (36%) free.
+[2/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+FAILED: esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj 
+/home/larzuk/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20240530/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc -DESP_PLATFORM -DIDF_VER=\"v5.3.1-244-g4d0db7045d\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I/home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/build/config -I/home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/main -I/home/larzuk/esp/esp-idf/components/newlib/platform_include -I/home/larzuk/esp/esp-idf/components/freertos/config/include -I/home/larzuk/esp/esp-idf/components/freertos/config/include/freertos -I/home/larzuk/esp/esp-idf/components/freertos/config/xtensa/include -I/home/larzuk/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include -I/home/larzuk/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -I/home/larzuk/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos -I/home/larzuk/esp/esp-idf/components/freertos/esp_additions/include -I/home/larzuk/esp/esp-idf/components/esp_hw_support/include -I/home/larzuk/esp/esp-idf/components/esp_hw_support/include/soc -I/home/larzuk/esp/esp-idf/components/esp_hw_support/include/soc/esp32s3 -I/home/larzuk/esp/esp-idf/components/esp_hw_support/dma/include -I/home/larzuk/esp/esp-idf/components/esp_hw_support/ldo/include -I/home/larzuk/esp/esp-idf/components/esp_hw_support/port/esp32s3/. -I/home/larzuk/esp/esp-idf/components/esp_hw_support/port/esp32s3/include -I/home/larzuk/esp/esp-idf/components/heap/include -I/home/larzuk/esp/esp-idf/components/log/include -I/home/larzuk/esp/esp-idf/components/soc/include -I/home/larzuk/esp/esp-idf/components/soc/esp32s3 -I/home/larzuk/esp/esp-idf/components/soc/esp32s3/include -I/home/larzuk/esp/esp-idf/components/hal/platform_port/include -I/home/larzuk/esp/esp-idf/components/hal/esp32s3/include -I/home/larzuk/esp/esp-idf/components/hal/include -I/home/larzuk/esp/esp-idf/components/esp_rom/include -I/home/larzuk/esp/esp-idf/components/esp_rom/include/esp32s3 -I/home/larzuk/esp/esp-idf/components/esp_rom/esp32s3 -I/home/larzuk/esp/esp-idf/components/esp_common/include -I/home/larzuk/esp/esp-idf/components/esp_system/include -I/home/larzuk/esp/esp-idf/components/esp_system/port/soc -I/home/larzuk/esp/esp-idf/components/esp_system/port/include/private -I/home/larzuk/esp/esp-idf/components/xtensa/esp32s3/include -I/home/larzuk/esp/esp-idf/components/xtensa/include -I/home/larzuk/esp/esp-idf/components/xtensa/deprecated_include -I/home/larzuk/esp/esp-idf/components/lwip/include -I/home/larzuk/esp/esp-idf/components/lwip/include/apps -I/home/larzuk/esp/esp-idf/components/lwip/include/apps/sntp -I/home/larzuk/esp/esp-idf/components/lwip/lwip/src/include -I/home/larzuk/esp/esp-idf/components/lwip/port/include -I/home/larzuk/esp/esp-idf/components/lwip/port/freertos/include -I/home/larzuk/esp/esp-idf/components/lwip/port/esp32xx/include -I/home/larzuk/esp/esp-idf/components/lwip/port/esp32xx/include/arch -I/home/larzuk/esp/esp-idf/components/lwip/port/esp32xx/include/sys -I/home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/components/tdeck-lib/include -I/home/larzuk/esp/esp-idf/components/esp_adc/include -I/home/larzuk/esp/esp-idf/components/esp_adc/interface -I/home/larzuk/esp/esp-idf/components/esp_adc/esp32s3/include -I/home/larzuk/esp/esp-idf/components/esp_adc/deprecated/include -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fno-shrink-wrap -fmacro-prefix-map=/home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck=. -fmacro-prefix-map=/home/larzuk/esp/esp-idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu17 -Wno-old-style-declaration -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj -MF esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj -c /home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/main/main.c
+/home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/main/main.c: In function 'app_main':
+/home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/main/main.c:15:3: error: expected ',' or ';' before 'td_board_init'
+   15 |   td_board_init(&Board);
+      |   ^~~~~~~~~~~~~
+[3/10] No install step for 'bootloader'
+ninja: build stopped: subcommand failed.
+Executing action: flash
+Running ninja in directory /home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/build
+Executing "ninja flash"...
+[1/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+FAILED: esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj 
+/home/larzuk/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20240530/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc -DESP_PLATFORM -DIDF_VER=\"v5.3.1-244-g4d0db7045d\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I/home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/build/config -I/home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/main -I/home/larzuk/esp/esp-idf/components/newlib/platform_include -I/home/larzuk/esp/esp-idf/components/freertos/config/include -I/home/larzuk/esp/esp-idf/components/freertos/config/include/freertos -I/home/larzuk/esp/esp-idf/components/freertos/config/xtensa/include -I/home/larzuk/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include -I/home/larzuk/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -I/home/larzuk/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos -I/home/larzuk/esp/esp-idf/components/freertos/esp_additions/include -I/home/larzuk/esp/esp-idf/components/esp_hw_support/include -I/home/larzuk/esp/esp-idf/components/esp_hw_support/include/soc -I/home/larzuk/esp/esp-idf/components/esp_hw_support/include/soc/esp32s3 -I/home/larzuk/esp/esp-idf/components/esp_hw_support/dma/include -I/home/larzuk/esp/esp-idf/components/esp_hw_support/ldo/include -I/home/larzuk/esp/esp-idf/components/esp_hw_support/port/esp32s3/. -I/home/larzuk/esp/esp-idf/components/esp_hw_support/port/esp32s3/include -I/home/larzuk/esp/esp-idf/components/heap/include -I/home/larzuk/esp/esp-idf/components/log/include -I/home/larzuk/esp/esp-idf/components/soc/include -I/home/larzuk/esp/esp-idf/components/soc/esp32s3 -I/home/larzuk/esp/esp-idf/components/soc/esp32s3/include -I/home/larzuk/esp/esp-idf/components/hal/platform_port/include -I/home/larzuk/esp/esp-idf/components/hal/esp32s3/include -I/home/larzuk/esp/esp-idf/components/hal/include -I/home/larzuk/esp/esp-idf/components/esp_rom/include -I/home/larzuk/esp/esp-idf/components/esp_rom/include/esp32s3 -I/home/larzuk/esp/esp-idf/components/esp_rom/esp32s3 -I/home/larzuk/esp/esp-idf/components/esp_common/include -I/home/larzuk/esp/esp-idf/components/esp_system/include -I/home/larzuk/esp/esp-idf/components/esp_system/port/soc -I/home/larzuk/esp/esp-idf/components/esp_system/port/include/private -I/home/larzuk/esp/esp-idf/components/xtensa/esp32s3/include -I/home/larzuk/esp/esp-idf/components/xtensa/include -I/home/larzuk/esp/esp-idf/components/xtensa/deprecated_include -I/home/larzuk/esp/esp-idf/components/lwip/include -I/home/larzuk/esp/esp-idf/components/lwip/include/apps -I/home/larzuk/esp/esp-idf/components/lwip/include/apps/sntp -I/home/larzuk/esp/esp-idf/components/lwip/lwip/src/include -I/home/larzuk/esp/esp-idf/components/lwip/port/include -I/home/larzuk/esp/esp-idf/components/lwip/port/freertos/include -I/home/larzuk/esp/esp-idf/components/lwip/port/esp32xx/include -I/home/larzuk/esp/esp-idf/components/lwip/port/esp32xx/include/arch -I/home/larzuk/esp/esp-idf/components/lwip/port/esp32xx/include/sys -I/home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/components/tdeck-lib/include -I/home/larzuk/esp/esp-idf/components/esp_adc/include -I/home/larzuk/esp/esp-idf/components/esp_adc/interface -I/home/larzuk/esp/esp-idf/components/esp_adc/esp32s3/include -I/home/larzuk/esp/esp-idf/components/esp_adc/deprecated/include -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fno-shrink-wrap -fmacro-prefix-map=/home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck=. -fmacro-prefix-map=/home/larzuk/esp/esp-idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu17 -Wno-old-style-declaration -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj -MF esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj -c /home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/main/main.c
+/home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/main/main.c: In function 'app_main':
+/home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/main/main.c:15:3: error: expected ',' or ';' before 'td_board_init'
+   15 |   td_board_init(&Board);
+      |   ^~~~~~~~~~~~~
+[2/10] Performing build step for 'bootloader'
+[1/1] cd /home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/build/bootloader/esp-idf/esptool_py && /home/larzuk/.espressif/python_env/idf5.3_py3.11_env/bin/python /home/larzuk/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/larzuk/GIT/WHackDeck/WHackDeck/fw/whackdeck/build/bootloader/bootloader.bin
+Bootloader binary size 0x5260 bytes. 0x2da0 bytes (36%) free.
+ninja: build stopped: subcommand failed.
+[Errno 2] could not open port /dev/ttyACM0: [Errno 2] No such file or directory: '/dev/ttyACM0'

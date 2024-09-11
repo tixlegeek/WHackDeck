@@ -1,0 +1,3 @@
+[submodule "fw/whackdeck/components/tdeck-lib"]
+	path = fw/whackdeck/components/tdeck-lib
+	url = git@github.com:tixlegeek/tdeck-lib.git
