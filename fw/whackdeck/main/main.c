@@ -15,8 +15,8 @@ void app_main(void)
   td_board_init(&Board);
 
   while(1){
-    voltage = td_battery_read(Board);
-    ESP_LOGI(TAG, "Battery level: %.02f ", (float)voltage);
+    td_battery_update(Board);
+    ESP_LOGI(TAG, "Battery level: %.02f ", Board->Battery.voltage);
     vTaskDelay(1000 / portTICK_PERIOD_MS);
   }
 }
