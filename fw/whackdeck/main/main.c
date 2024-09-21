@@ -1,3 +1,5 @@
+
+
 #include <board.h>
 #include <esp_err.h>
 #include <esp_log.h>
@@ -11,12 +13,14 @@
 #define SAMPLES 512 // Number of samples for the sine wave buffer
 
 #include <tdeck-lib.h>
-// #include <board.h>
 #include "driver/i2c_master.h"
 
 #include <freertos/FreeRTOS.h>
 #include <freertos/task.h>
 #include <st7789.h>
+
+#include "./wavreader.h"
+
 const static char *TAG = "WHACKDECK";
 
 td_board_t *Board = NULL;
@@ -69,51 +73,16 @@ void vTaskRefresh(void *ctx) {
     vTaskDelay(5 / portTICK_PERIOD_MS);
   }
 }
-// Generate sine wave data
-void generate_sine_wave(int16_t *buffer, int num_samples, float frequency,
-                        int sample_rate) {
-  for (int i = 0; i < num_samples; i++) {
-    float sample = sinf(2 * PI * frequency * i / sample_rate);
-    buffer[i] = (int16_t)(sample * 5000);     // Left channel
-  }
-}
 
-extern const int16_t pcm_start[] asm("_binary_drama_pcm_start");
-extern const int16_t pcm_end[] asm("_binary_drama_pcm_end");
 
-int16_t sndbuffer[SAMPLES] = {0};
 
-void vTaskPlay(void *ctx) {
-  td_board_t *Board = (td_board_t *)ctx;
 
-  size_t bytes_written = 0;
-  size_t total_sample_size = pcm_end - pcm_start;
-  size_t cursor = 0;
-  int16_t  *readaddr = NULL;
-  while (1) {
-
-    readaddr = (int16_t*)(pcm_start + cursor);
-
-    if ((readaddr+(SAMPLES* sizeof(int16_t))) < pcm_end){
-      memcpy(sndbuffer, readaddr , SAMPLES * sizeof(int16_t));
-
-      ESP_ERROR_CHECK(i2s_channel_write(Board->Speaker.dev, sndbuffer, (SAMPLES * sizeof(int16_t)),
-                        &bytes_written, portMAX_DELAY));
-      ESP_LOGI(TAG, "Bytes written:%d", (int)bytes_written);
-      cursor += bytes_written>>1;
-      bytes_written=0;
-    } else {
-      break;
-    }
-
-    vTaskDelay(1);
-  }
-  vTaskDelete(NULL);
-}
 
 void app_main(void) {
-  float voltage = .0f;
+
   td_board_init(&Board);
+
+  float voltage = .0f;
   size_t w_bytes = 0;
   uint32_t offset = 0;
 
@@ -129,7 +98,13 @@ void app_main(void) {
   td_battery_update(Board);
   ESP_LOGI(TAG, "Battery level: %.02f ", Board->Battery.voltage);
 
-  xTaskCreate(vTaskPlay, "TaskPlay", 2048, Board, tskIDLE_PRIORITY, &maintask);
+  // TODO: remove this block
+  {
+    if( sdcard_mount(SDCARD_MOUNT_POINT) == NULL )
+      ESP_LOGE(TAG, "No SD Card present");
+    else
+      play_wav(Board, SDCARD_MOUNT_POINT "/wav/Quack.wav");
+  }
 
   while (1) {
     vTaskDelay(1000 / portTICK_PERIOD_MS);
