@@ -29,7 +29,8 @@ typedef struct wav_header_t
 bool is_valid_wav_data(wav_header_t* Wav);
 void wav_header_dump(wav_header_t* Wav);
 bool wav_header_load_from_file(FILE* wavFile);
-void i2s_reconfig(td_board_t* Board, wav_header_t *wav_header)
+void i2s_reconfig(td_board_t* Board, wav_header_t *wav_header);
 esp_err_t play_wav_file(td_board_t* Board, const char *fp);
 esp_err_t play_wav_data(td_board_t* Board, const unsigned char *data, size_t data_len);
+
 
