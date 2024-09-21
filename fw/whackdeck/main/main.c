@@ -20,6 +20,7 @@
 #include <st7789.h>
 
 #include "./wavreader.h"
+#include "./quack.h"
 
 const static char *TAG = "WHACKDECK";
 
@@ -103,7 +104,8 @@ void app_main(void) {
     if( sdcard_mount(SDCARD_MOUNT_POINT) == NULL )
       ESP_LOGE(TAG, "No SD Card present");
     else
-      play_wav(Board, SDCARD_MOUNT_POINT "/wav/Quack.wav");
+      //play_wav_file(Board, SDCARD_MOUNT_POINT "/wav/Quack.wav");
+      play_wav_data(Board, Quack_wav, Quack_wav_len);
   }
 
   while (1) {

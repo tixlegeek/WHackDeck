@@ -71,7 +71,62 @@ bool wav_header_load_from_file(FILE* wav_file)
 }
 
 
-esp_err_t play_wav(td_board_t* Board, const char *fp)
+
+void i2s_reconfig( td_board_t* Board, wav_header_t *wav_header )
+{
+    i2s_channel_disable(Board->Speaker.dev);
+
+    Board->Speaker.tx_cfg->slot_cfg.slot_mode      = wav_header->NumChannels==1 ? I2S_SLOT_MODE_MONO : I2S_SLOT_MODE_STEREO; // mono/stereo
+    Board->Speaker.tx_cfg->slot_cfg.data_bit_width = (i2s_data_bit_width_t)wav_header->BitsPerSample;
+    i2s_channel_reconfig_std_slot(Board->Speaker.dev, &Board->Speaker.tx_cfg->slot_cfg);
+
+    Board->Speaker.tx_cfg->clk_cfg.sample_rate_hz = wav_header->SampleRate;
+    i2s_channel_reconfig_std_clock(Board->Speaker.dev, &Board->Speaker.tx_cfg->clk_cfg);
+
+    i2s_channel_enable(Board->Speaker.dev);
+}
+
+
+esp_err_t play_wav_data(td_board_t* Board, const unsigned char *data, size_t bytes_count)
+{
+    wav_header_t wav_header;
+
+    memcpy(&wav_header, data, 44 );
+
+    if( !is_valid_wav_data( &wav_header ) ) {
+        ESP_LOGE(TAG, "Invalid WAV data");
+        ESP_LOG_BUFFER_HEXDUMP(TAG, &wav_header, 44, ESP_LOG_ERROR);
+        return ESP_ERR_INVALID_ARG;
+    }
+
+    wav_header_dump( &wav_header ); // Dump the header data to serial, optional!
+
+    i2s_reconfig( Board, &wav_header );
+
+    size_t offset = 44;
+
+    int16_t *buf = (int16_t *)calloc(AUDIO_BUFFER_SIZE, sizeof(int16_t));
+    size_t bytes_read = 0;
+    size_t bytes_written = 0;
+    size_t remaining_bytes = bytes_count - offset;
+
+    while(offset < bytes_count)
+    {
+        bytes_read = remaining_bytes > AUDIO_BUFFER_SIZE ? AUDIO_BUFFER_SIZE : remaining_bytes;
+        i2s_channel_write(Board->Speaker.dev, (int16_t*)&data[offset], bytes_read, &bytes_written, portMAX_DELAY);
+        offset += bytes_read;
+        remaining_bytes = bytes_count - offset;
+        ESP_LOGV(TAG, "Bytes read: %d, offset: %d, remaining: %d", bytes_read, offset, remaining_bytes);
+    }
+
+    i2s_channel_disable(Board->Speaker.dev);
+    free(buf);
+
+    return ESP_OK;
+}
+
+
+esp_err_t play_wav_file(td_board_t* Board, const char *fp)
 {
     FILE *fh = fopen(fp, "rb");
     if (fh == NULL)
@@ -93,21 +148,9 @@ esp_err_t play_wav(td_board_t* Board, const char *fp)
 
     wav_header_dump( &wav_header ); // Dump the header data to serial, optional!
 
-    // reconfigure i2s according to the Wav type
-    {
-        i2s_channel_disable(Board->Speaker.dev);
+    i2s_reconfig( Board, &wav_header );
 
-        Board->Speaker.tx_cfg->slot_cfg.slot_mode      = wav_header.NumChannels==1 ? I2S_SLOT_MODE_MONO : I2S_SLOT_MODE_STEREO; // mono/stereo
-        Board->Speaker.tx_cfg->slot_cfg.data_bit_width = (i2s_data_bit_width_t)wav_header.BitsPerSample;
-        i2s_channel_reconfig_std_slot(Board->Speaker.dev, &Board->Speaker.tx_cfg->slot_cfg);
-
-        Board->Speaker.tx_cfg->clk_cfg.sample_rate_hz = wav_header.SampleRate;
-        i2s_channel_reconfig_std_clock(Board->Speaker.dev, &Board->Speaker.tx_cfg->clk_cfg);
-
-        i2s_channel_enable(Board->Speaker.dev);
-    }
-
-    // skip the header...
+    // set the cursor right after the header...
     fseek(fh, 44, SEEK_SET);
 
     // create a writer buffer
