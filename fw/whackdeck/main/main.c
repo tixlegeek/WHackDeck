@@ -4,6 +4,10 @@
 #include <math.h>
 #include <stdio.h>
 #include <tdeck-lib.h>
+#include <sys/unistd.h>
+#include <sys/stat.h>
+#include "esp_vfs_fat.h"
+#include "sdmmc_cmd.h"
 // #include <board.h>
 #include "driver/i2c_master.h"
 
@@ -12,7 +16,6 @@
 #include <st7789.h>
 const static char *TAG = "WHACKDECK";
 
-td_board_t *Board = NULL;
 
 /**************************************************************/
 
@@ -30,16 +33,66 @@ void vTaskMain(void *ctx) {
   }
 }
 
+extern const int16_t pcm_start[] asm("_binary_drama_pcm_start");
+extern const int16_t pcm_end[] asm("_binary_drama_pcm_end");
+
+#define SAMPLES 1024
+int16_t sndbuffer[SAMPLES] = {0};
+
+void vTaskPlay(void *ctx) {
+  td_board_t *Board = (td_board_t *)ctx;
+
+  size_t bytes_written = 0;
+  size_t total_sample_size = pcm_end - pcm_start;
+  size_t cursor = 0;
+  int16_t  *readaddr = NULL;
+  while (1) {
+
+    readaddr = (int16_t*)(pcm_start + cursor);
+
+    if ((readaddr+(SAMPLES* sizeof(int16_t))) < pcm_end){
+      memcpy(sndbuffer, readaddr , SAMPLES * sizeof(int16_t));
+
+      ESP_ERROR_CHECK(i2s_channel_write(Board->Speaker->dev, sndbuffer, (SAMPLES * sizeof(int16_t)),
+                        &bytes_written, portMAX_DELAY));
+      ESP_LOGI(TAG, "Bytes written:%d", (int)bytes_written);
+      cursor += bytes_written>>1;
+      bytes_written=0;
+    } else {
+      break;
+    }
+
+    vTaskDelay(1);
+  }
+  vTaskDelete(NULL);
+}
+
 void app_main(void) {
   float voltage = .0f;
-  td_board_init(&Board);
+  td_board_t *Board = NULL;
+
+  esp_err_t err = td_board_init(&Board, INIT_SDCARD|INIT_DISPLAY|INIT_KEYBOARD|INIT_TRACKBALL|INIT_SPEAKER|INIT_BATTERY);
+  if(err != ESP_OK){
+    ESP_LOGE(TAG, "Initialisation failed.");
+    while(1){
+      ESP_LOGE(TAG, "x");
+      vTaskDelay(100);
+    }
+  }
 
   TaskHandle_t maintask = NULL;
+  TaskHandle_t refreshtask = NULL;
+
+  ESP_ERROR_CHECK(i2s_channel_enable(Board->Speaker->dev));
+  ESP_LOGI(TAG, "Battery level: %.02f ", Board->Battery->voltage);
+
+  td_battery_update(Board);
+  xTaskCreate(vTaskPlay, "TaskPlay", 4096, Board, tskIDLE_PRIORITY, &maintask);
   xTaskCreate(vTaskMain, "Main", 2048, Board, tskIDLE_PRIORITY, &maintask);
   while (1) {
     td_battery_update(Board);
-    ESP_LOGI(TAG, "Battery level: %.02f ", Board->Battery.voltage);
+    ESP_LOGI(TAG, "Battery level: %.02f ", Board->Battery->voltage);
     vTaskDelay(5000 / portTICK_PERIOD_MS);
   }
-  
+
 }
