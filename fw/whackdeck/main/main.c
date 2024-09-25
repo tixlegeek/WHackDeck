@@ -52,7 +52,9 @@ void vTaskPlay(void *ctx) {
 
     if ((readaddr+(SAMPLES* sizeof(int16_t))) < pcm_end){
       memcpy(sndbuffer, readaddr , SAMPLES * sizeof(int16_t));
-
+      for(uint16_t i=0;i<SAMPLES; i++){
+        sndbuffer[i]=sndbuffer[i]/20;
+      }
       ESP_ERROR_CHECK(i2s_channel_write(Board->Speaker->dev, sndbuffer, (SAMPLES * sizeof(int16_t)),
                         &bytes_written, portMAX_DELAY));
       ESP_LOGI(TAG, "Bytes written:%d", (int)bytes_written);
