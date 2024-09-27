@@ -16,7 +16,6 @@
 #include <st7789.h>
 const static char *TAG = "WHACKDECK";
 
-
 /**************************************************************/
 
 void vTaskMain(void *ctx) {
@@ -38,6 +37,31 @@ extern const int16_t pcm_end[] asm("_binary_drama_pcm_end");
 
 #define SAMPLES 1024
 int16_t sndbuffer[SAMPLES] = {0};
+
+static int x = 160;
+static int y = 120;
+//static int oldx = 0;
+//static int oldy = 0;
+
+// TOBOZO
+void turtle(void*ctx, int dirx, int diry)
+{
+  td_board_t *Board = (td_board_t *)ctx;
+  //oldx = x;
+  //oldy = y;
+  x += dirx;
+  y += diry;
+
+  if( x > 319 ) x = 319;
+  if( x <= 0 )  x = 0;
+
+  if( y > 239 ) y = 239;
+  if( y <= 0 )  y = 0;
+
+  //lcdDrawPixel(Board, oldx, oldy, 0x0000);
+  lcdDrawPixel(Board, x,    y,    0xffff);
+  lcdDrawFinish(Board);
+}
 
 void vTaskPlay(void *ctx) {
   td_board_t *Board = (td_board_t *)ctx;
@@ -84,13 +108,17 @@ void app_main(void) {
 
   TaskHandle_t maintask = NULL;
   TaskHandle_t refreshtask = NULL;
+  TaskHandle_t trackballtask = NULL;
 
   ESP_ERROR_CHECK(i2s_channel_enable(Board->Speaker->dev));
   ESP_LOGI(TAG, "Battery level: %.02f ", Board->Battery->voltage);
 
   td_battery_update(Board);
-  xTaskCreate(vTaskPlay, "TaskPlay", 4096, Board, tskIDLE_PRIORITY, &maintask);
+  xTaskCreate(vTaskPlay, "TaskPlay", 4096, Board, tskIDLE_PRIORITY, &refreshtask);
   xTaskCreate(vTaskMain, "Main", 2048, Board, tskIDLE_PRIORITY, &maintask);
+  td_trackball_set_cb(turtle) ;
+  xTaskCreate(td_trackball_task, "TrackBall", 2048, Board, tskIDLE_PRIORITY, &trackballtask);
+
   while (1) {
     td_battery_update(Board);
     ESP_LOGI(TAG, "Battery level: %.02f ", Board->Battery->voltage);
