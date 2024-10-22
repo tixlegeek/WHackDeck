@@ -13,10 +13,21 @@
 
 #include <freertos/FreeRTOS.h>
 #include <freertos/task.h>
+#include <jsonconfig.h>
+
+#include <audio.h>
 #include <st7789.h>
+
+#include <dirent.h>
 const static char *TAG = "WHACKDECK";
 
 /**************************************************************/
+typedef enum {
+    AUDIO_PLAYER_STATE_IDLE,
+    AUDIO_PLAYER_STATE_PLAYING,
+    AUDIO_PLAYER_STATE_PAUSE,
+    AUDIO_PLAYER_STATE_SHUTDOWN
+} audio_player_state_t;
 
 void vTaskMain(void *ctx) {
   td_board_t *Board = (td_board_t *)ctx;
@@ -28,15 +39,16 @@ void vTaskMain(void *ctx) {
     if (err == ESP_OK) {
       ESP_LOGI(TAG, "Key: %c", key);
     }
+
     vTaskDelay(50 / portTICK_PERIOD_MS);
   }
+
 }
 
+/*
 extern const int16_t pcm_start[] asm("_binary_drama_pcm_start");
 extern const int16_t pcm_end[] asm("_binary_drama_pcm_end");
-
-#define SAMPLES 1024
-int16_t sndbuffer[SAMPLES] = {0};
+*/
 
 static int x = 160;
 static int y = 120;
@@ -63,41 +75,11 @@ void turtle(void*ctx, int dirx, int diry)
   lcdDrawFinish(Board);
 }
 
-void vTaskPlay(void *ctx) {
-  td_board_t *Board = (td_board_t *)ctx;
-
-  size_t bytes_written = 0;
-  size_t total_sample_size = pcm_end - pcm_start;
-  size_t cursor = 0;
-  int16_t  *readaddr = NULL;
-  while (1) {
-
-    readaddr = (int16_t*)(pcm_start + cursor);
-
-    if ((readaddr+(SAMPLES* sizeof(int16_t))) < pcm_end){
-      memcpy(sndbuffer, readaddr , SAMPLES * sizeof(int16_t));
-      for(uint16_t i=0;i<SAMPLES; i++){
-        sndbuffer[i]=sndbuffer[i]/20;
-      }
-      ESP_ERROR_CHECK(i2s_channel_write(Board->Speaker->dev, sndbuffer, (SAMPLES * sizeof(int16_t)),
-                        &bytes_written, portMAX_DELAY));
-      ESP_LOGI(TAG, "Bytes written:%d", (int)bytes_written);
-      cursor += bytes_written>>1;
-      bytes_written=0;
-    } else {
-      break;
-    }
-
-    vTaskDelay(1);
-  }
-  vTaskDelete(NULL);
-}
-
 void app_main(void) {
   float voltage = .0f;
   td_board_t *Board = NULL;
 
-  esp_err_t err = td_board_init(&Board, INIT_SDCARD|INIT_DISPLAY|INIT_KEYBOARD|INIT_TRACKBALL|INIT_SPEAKER|INIT_BATTERY);
+  esp_err_t err = td_board_init(&Board, INIT_SDCARD|INIT_DISPLAY|INIT_KEYBOARD|INIT_TRACKBALL|INIT_SPEAKER|INIT_BATTERY|INIT_GPS);
   if(err != ESP_OK){
     ESP_LOGE(TAG, "Initialisation failed.");
     while(1){
@@ -107,22 +89,58 @@ void app_main(void) {
   }
 
   TaskHandle_t maintask = NULL;
-  TaskHandle_t refreshtask = NULL;
   TaskHandle_t trackballtask = NULL;
+  //TaskHandle_t gpsTask = NULL;
+  //TaskHandle_t nmeaTask = NULL;
 
   ESP_ERROR_CHECK(i2s_channel_enable(Board->Speaker->dev));
   ESP_LOGI(TAG, "Battery level: %.02f ", Board->Battery->voltage);
 
   td_battery_update(Board);
-  xTaskCreate(vTaskPlay, "TaskPlay", 4096, Board, tskIDLE_PRIORITY, &refreshtask);
   xTaskCreate(vTaskMain, "Main", 2048, Board, tskIDLE_PRIORITY, &maintask);
   td_trackball_set_cb(turtle) ;
   xTaskCreate(td_trackball_task, "TrackBall", 2048, Board, tskIDLE_PRIORITY, &trackballtask);
+
+  ESP_ERROR_CHECK(td_audio_init(Board));
+
+  struct dirent *entity;
+ //BOARD_SDCARD_MOUNT_POINT
+  DIR *dir = opendir(BOARD_SDCARD_MOUNT_POINT);
+  if(dir){
+    while((entity = readdir(dir))!= NULL){
+      switch (entity->d_type) {
+        case DT_DIR: // If entity points to a directory
+          ESP_LOGW(TAG, "+ %s", entity->d_name);
+          break;
+        case DT_REG: // If entity points to a file?
+          ESP_LOGW(TAG, "- %s", entity->d_name);
+          break;
+        default:
+          ESP_LOGW(TAG, "? %s", entity->d_name);
+          break;
+      }
+    }
+    closedir(dir);
+  }
+  else
+  {
+    ESP_LOGE(TAG, "Could not open dir \"%s\"", BOARD_SDCARD_MOUNT_POINT);
+  }
+  td_config_t *config = malloc(sizeof(td_config_t));
+  ESP_ERROR_CHECK(td_load( BOARD_SDCARD_MOUNT_POINT"/CONFIG~1.JSO", config));
+
 
   while (1) {
     td_battery_update(Board);
     ESP_LOGI(TAG, "Battery level: %.02f ", Board->Battery->voltage);
     vTaskDelay(5000 / portTICK_PERIOD_MS);
+
+    /*
+    td_gps_sendcmd(Board, "$PCAS03,0,0,0,0,0,0,0,0,0,0,,,0,0");
+    vTaskDelay(5000 / portTICK_PERIOD_MS);
+    td_gps_sendcmd(Board, "$PCAS06,0");
+    vTaskDelay(5000 / portTICK_PERIOD_MS);
+    */
   }
 
 }
